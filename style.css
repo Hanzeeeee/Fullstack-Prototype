@@ -1,42 +1,85 @@
+/* Page visibility */
+.page { display: none; }
+.page.active { display: block; }
+
+/* Role-based visibility */
+body.not-authenticated .role-logged-in { display: none; }
+body.authenticated .role-logged-out { display: none; }
+.role-admin { display: none; }
+body.is-admin .role-admin { display: block; }
+
+/* Body styling */
 body {
-  background-color:white;
+    background-color: white;
 }
 
-h1 {
-  color: black;
-  
+/* Navbar and links */
+.nav-links a {
+    color: white;
+    text-decoration: none;
 }
 
-p {
-  font-family: verdana;
-  font-size: 20px;
+.title {
+    padding: 10px 40px;
+    text-decoration: none;
+    color: white;
+    font-size: larger;
 }
 
-.navbar {
-
-    background-color: aqua;
-    height: 100px;
-
-}
-
-.bullet {
-
+.nav-links {
+    list-style: none;       /* remove bullets */
+    padding: 10px 10px;     /* internal padding */
+    margin-left: 1000px;    /* keeps original spacing */
+    text-decoration: none;
     color: black;
 }
 
+/* Headings */
+h1 { color: black; }
+h2 { color: black; }
+p {
+    font-family: Verdana;
+    font-size: 20px;
+}
+
+/* Bullet points */
+.bullet {
+    color: black;
+    font-size: 10px;
+}
+
+/* Local Storage highlight */
 .LS {
-
-    color:blueviolet;  
+    color: blueviolet;
 }
 
+/* Notification box */
 .notif {
-
-    background-color: aqua;
-    height: 36px;
-    width: 580px;
+    background-color: rgb(120, 241, 225);
+    height: 60px;
+    width: 600px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
-.button1 {
-
-    color: blue ;
+/* Mini title */
+.minititle {
+    margin-left: 10px;
 }
+
+/* Get started button */
+.getstart {
+    background-color: blue;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    transform: translateX(30px);
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+    
